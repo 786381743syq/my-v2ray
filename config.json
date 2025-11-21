@@ -1,4 +1,7 @@
 {
+  "log": {
+    "loglevel": "warning"
+  },
   "inbounds": [{
     "port": 8080,
     "protocol": "vmess",
@@ -11,11 +14,15 @@
     "streamSettings": {
       "network": "ws",
       "wsSettings": {
-        "path": "/vmess"
+        "path": "/ws",
+        "headers": {
+          "Host": "verbal-marge-sunyuqing-workspace-d4e04720.koyeb.app"
+        }
       }
     }
   }],
   "outbounds": [{
-    "protocol": "freedom"
+    "protocol": "freedom",
+    "settings": {}
   }]
 }
